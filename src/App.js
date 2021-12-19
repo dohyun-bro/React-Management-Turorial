@@ -1,11 +1,11 @@
 import Customer from './components/Customer'
 import './App.css';
 
-const customer = [
+const customers = [
   {
   'id': 1,
   'image': 'https://placeimg.com/64/64/1',
-  'name': '나동빈',
+  'name': '김삼이',
   'birthday': '961222',
   'gender': '남자',
   'job': '대학생'
@@ -13,7 +13,7 @@ const customer = [
 {
   'id': 2,
   'image': 'https://placeimg.com/64/64/2',
-  'name': '홍길동',
+  'name': '주도현',
   'birthday': '960305',
   'gender': '남자',
   'job': '프로그램어'
@@ -21,7 +21,7 @@ const customer = [
 {
   'id': 3,
   'image': 'https://placeimg.com/64/64/3',
-  'name': '이순신',
+  'name': '한민석',
   'birthday': '921205',
   'gender': '남자',
   'job': '디자이너'
@@ -31,21 +31,7 @@ const customer = [
 function App() {
   return (
     <div>
-      {
-        customers.map(c => {
-          return (
-            <Customer
-              key={c.id}
-              id={c.id}
-              image={c.image}
-              name={c.name}
-              birthday={c.birthday}
-              gender={c.gender}
-              job={c.job}
-            />
-          );
-        })
-      }
+      {customers.map(c => { return ( <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} /> ); })}
     </div>
   );
 }
